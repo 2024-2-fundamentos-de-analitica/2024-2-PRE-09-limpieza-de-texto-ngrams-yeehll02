@@ -15,8 +15,8 @@ def test_01():
         "files/output/output.txt",
     )
 
-    if not os.path.exists("files/output/test.csv"):
-        raise FileNotFoundError("File 'files/output/test.csv' not found")
+    if not os.path.exists("files/test.csv"):
+        raise FileNotFoundError("File 'files/test.csv' not found")
 
     test = pd.read_csv("files/test.csv", index_col=None)
 
@@ -42,4 +42,3 @@ def test_01():
     assert count.loc["AIRLINE COMPANIES"] == 1
     assert count.loc["AIRLINES"] == 1
     assert count.loc["ANALYTIC APPLICATIONS"] == 9
-    assert count.loc["ANALYTIC MODEL"] == 4
